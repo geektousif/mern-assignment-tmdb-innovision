@@ -1,0 +1,46 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc -w",
+        "devrun": "nodemon dist/index.js",
+        "dev": "concurrently \"npm run watch\" \"npm run devrun\"",
+        "start": "node dist/index.js",
+        "lint": "eslint src/**/*.ts",
+        "lint:fix": "eslint src/**/*.ts --fix .",
+        "prettier": "prettier --check **/*.ts",
+        "prettier:fix": "prettier --write **/*.ts",
+        "prepare": "husky"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "http-status": "^2.0.0",
+        "joi": "^17.13.3",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.8.3",
+        "morgan": "^1.10.0",
+        "winston": "^3.17.0"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.0",
+        "@types/morgan": "^1.9.9",
+        "@typescript-eslint/eslint-plugin": "^7.18.0",
+        "@typescript-eslint/parser": "^7.18.0",
+        "concurrently": "^9.1.0",
+        "eslint": "^8.2.0",
+        "eslint-plugin-import": "^2.25.2",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.2.10",
+        "nodemon": "^3.1.7",
+        "prettier": "^3.4.1",
+        "typescript": "^5.7.2"
+    }
+}
