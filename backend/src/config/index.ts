@@ -9,6 +9,7 @@ const envVarsSchema = joi
         PORT: joi.number().default(3000),
         MONGO_URI: joi.string().required(),
         TMDB_API_KEY: joi.string().required(),
+        FRONTEND_ORIGIN_URL: joi.string().required(),
     })
     .unknown();
 
@@ -22,4 +23,5 @@ export const config = {
     port: envVars.PORT,
     mongoUri: envVars.MONGO_URI,
     tmdbApiKey: envVars.TMDB_API_KEY,
+    frontendOriginUrl: envVars.FRONTEND_ORIGIN_URL,
 };
